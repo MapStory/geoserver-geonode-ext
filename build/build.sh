@@ -7,14 +7,14 @@ mkdir temp-build-dir
 cd temp-build-dir
 REPOS_DIR=`pwd`
 
-git clone -b mapstory-2.6.x https://github.com/rogue-jctd/geoserver-geonode-ext.git
+git clone -b mapstory-2.6.x https://github.com/mapstory/geoserver-geonode-ext.git
 cd geoserver-geonode-ext
 # only run clean, do not run install yet
 mvn clean -DskipTests
 cd ${REPOS_DIR}
 
 # adds support for xdate needed for importing layers with time attrib
-git clone -b postgis-xdate-udt-12.x https://github.com/rogue-jctd/geotools.git
+git clone -b postgis-xdate-udt-12.x https://github.com/mapstory/geotools.git
 cd geotools 
 mvn install -DskipTests
 cd ${REPOS_DIR}

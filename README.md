@@ -1,37 +1,9 @@
-building geoserver 2.6 for GeoSHAPE
+building geoserver 2.6 for MapStory
 =============================================
 Do run the tests when appropriate:
  
-```
-git clone -b mapstory-2.6.x https://github.com/MapStory/geoserver-geonode-ext.git
-cd geoserver-geonode-ext
-# just clean, dont build yet
-mvn clean -DskipTests
-cd ..
+use the build/build.sh script to build the gs with the proper dependancies. You should rebase custome commits to geoserver and geotools on top of latest 2.6.x and 12.x branches correspondingly. 
 
-# adds support for xdate needed for importing layers with time attrib
-git clone -b postgis-xdate-udt-12.x https://github.com/MapStory/geotools.git
-cd geotools 
-mvn install -DskipTests
-cd ..
-
-# has a date fix which allows importing layers with time attrib into geogig
-git clone -b 2.6.x https://github.com/garnertb/geoserver.git
-cd geoserver
-mvn install -DskipTests
-cd..
-
-# build latest 2.6.x geogig rest api, no nightly snapshots available
-git clone -b 2.6.x https://github.com/boundlessgeo/geoserver-exts.git
-cd geoserver-exts
-mvn install -DskipTests
-cd ..
-
-cd geoserver-geonode-ext
-mvn install -DskipTests
-
-mvn war:war
-```
 
 geoserver-geonode-ext
 =====================
