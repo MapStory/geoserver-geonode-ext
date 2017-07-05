@@ -447,7 +447,7 @@
 		</dependency>
 		<!-- dependency> <groupId>org.easymock</groupId> <artifactId>easymockclassextension</artifactId>
 			<version>2.5.2</version> <scope>test</scope> </dependency -->
- 
+
 <!-- Below shouldn’t be needed -->
 <!--
 		<dependency>
@@ -686,7 +686,7 @@
 				<geogig.version>1.1.1-RC2</geogig.version>
 			</properties>
 			<dependencies>
-				<!-- Pin GeoGig version to 1.1-SNAPSHOT -->
+				<!-- Pin GeoGig version -->
 				<dependency>
 					<groupId>org.locationtech.geogig</groupId>
 					<artifactId>geogig-cli</artifactId>
@@ -1017,6 +1017,7 @@
 					</execution>
 				</executions>
 				<configuration>
+					<skip>true</skip> <!-- won't be needed when gitcommitid 2.2.3 is released -->
 					<prefix>build</prefix>
 					<failOnNoGitDirectory>false</failOnNoGitDirectory>
 					<skipPoms>false</skipPoms>
