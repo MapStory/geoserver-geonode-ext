@@ -683,7 +683,7 @@
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<properties>
-				<geogig.version>1.1.1-RC2</geogig.version>
+				<geogig.version>1.1.1</geogig.version>
 			</properties>
 			<dependencies>
 				<!-- Pin GeoGig version -->
@@ -846,6 +846,11 @@
 					<artifactId>bcmail-jdk14</artifactId>
 					<version>138</version>
 					<scope>provided</scope>
+				</dependency>
+				<dependency>
+						<groupId>org.geoserver.extension</groupId>
+						<artifactId>gs-ysld</artifactId>
+						<version>${geoserver.version}</version>
 				</dependency>
 				<!-- use the same version of bcmail as bcprov -->
         <!--
